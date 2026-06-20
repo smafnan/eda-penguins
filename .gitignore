@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# NOTE: we deliberately DO commit eda_penguins.ipynb (with outputs),
+# the data/ CSV, and images/ so the finished analysis is viewable on GitHub
+# without anyone having to run anything.
