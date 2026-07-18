@@ -1,9 +1,16 @@
 # Dependencies for the EDA notebook.
 #   python -m venv .venv && pip install -r requirements.txt
-pandas>=2.0
+#
+# pandas: >=2.2 because the notebook calls
+#   .groupby(...).apply(..., include_groups=False), and the include_groups
+#   kwarg was only added in pandas 2.2.0 (TypeError on 2.0/2.1).
+# seaborn: capped at <0.14 because sns.countplot(..., palette=...) is called
+#   without assigning `hue`; seaborn's own FutureWarning states this usage is
+#   removed in v0.14.0.
+pandas>=2.2
 numpy>=1.24
 matplotlib>=3.7
-seaborn>=0.13
+seaborn>=0.13,<0.14
 jupyter>=1.0
 nbconvert>=7.0
 nbformat>=5.9
