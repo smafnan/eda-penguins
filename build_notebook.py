@@ -41,7 +41,6 @@ reason to never trust a correlation without looking at the subgroups.
 
     ("markdown", "## 1. Setup"),
     ("code", """\
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -255,8 +254,6 @@ for sp, r in within.items():
     print(f"  {sp:10s}: {r:+.2f}")
 """),
     ("code", """\
-plt.figure(figsize=(9, 6))
-
 # Per-species scatter + regression line: every line slopes UP.
 sns.lmplot(
     data=df_clean, x="bill_length_mm", y="bill_depth_mm",
